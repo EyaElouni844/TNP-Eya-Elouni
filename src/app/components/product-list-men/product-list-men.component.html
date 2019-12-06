@@ -1,0 +1,23 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 text-center">
+                <app-addproduct></app-addproduct>
+            </div>
+            <div class="col-9">
+                <input class="form-control" [(ngModel)]="searchParam" (input)="search(searchParam)" type="text" placeholder="Search" aria-label="Search">        
+            </div>
+
+        </div>
+        <div class="row text-center" >
+            
+                <div class="col-12">
+                        <div class="card-columns">
+                                    <app-product [product]="product"></app-product>
+                        </div>
+                    </div>
+
+                
+        </div>
+
+    </div>

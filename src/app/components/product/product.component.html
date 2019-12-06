@@ -1,0 +1,29 @@
+ <!-- Card -->
+ <div class="card mb-4 hoverable zoom" mdbWavesEffect>
+    <!--<mdb-badge  class="young-passion-gradient" >New</mdb-badge>-->
+
+    <!--Card image-->
+    <div class="view view-cascade overlay">
+      <img class="card-img-top " src="{{assets/ p.image }} | safe" alt="Card image cap">
+      <a [routerLink]="['/product-details',p.id]">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+      <!--wave effect-->
+
+      <!--Title-->
+      <h4 class="card-title text-center">{{ p.brand }} {{ p.ref  |uppercase }} watch for {{ p.gender }}</h4>
+      <h5 class="text-center">{{ p.price }} DT</h5>
+      <p class="text-overflow"> {{ p.description }}</p>
+    
+<!--card footer-->
+    <div class="footercard text-center overlay" >
+        <button mdbBtn  type="button" gradient="purple" class="text-white btn-sm" mdbWavesEffect  [routerLink]="['/updateProduct',p.id]"><i class="fas fa-edit"></i> Modify</button>
+        <button mdbBtn  type="button" color="danger" class="btn-sm" outline="true" (click)="removeProduct(p)" mdbWavesEffect><i class="fas fa-trash-alt"></i> Delete</button>
+    </div>
+    </div>
+</div>
+  <!-- Card -->

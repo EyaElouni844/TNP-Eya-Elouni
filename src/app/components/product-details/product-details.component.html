@@ -1,0 +1,72 @@
+
+<div class="card pt-3 container dark-grey-text mt-5" style="margin-bottom:7.5%">
+
+    <!--Grid row-->
+    <div class="row wow fadeIn">
+
+      <!--Grid column-->
+      <div class="col-4 mb-5 text-center">
+        <img src="{{ product.image }}" class="img-fluid" alt="">
+        <button mdbBtn  type="button" class="mean-fruit-gradient text-white" mdbWavesEffect  [routerLink]="['/updateProduct',product.id]"><i class="fas fa-edit"></i> Modify</button>
+        <button mdbBtn  type="button" color="danger" outline="true" (click)="removeProduct(product)" [routerLink]="['']" mdbWavesEffect><i class="fas fa-trash-alt"></i> Delete</button>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-4 mb-5">
+
+        <!--Content-->
+        <div class="p-4">
+            <div class="text-muted">Watches for {{ product.gender }}</div>
+          <div class="mb-3">
+            <h3>{{ product.brand }} {{ product.title }}</h3>
+          </div>
+
+          <p class="lead">
+            {{ product.price }} DT
+          </p>
+
+          <p class="lead">
+            {{ product.quantity }} available
+          </p>
+
+          <p class="lead font-weight-bold mt-5">Description</p>
+    <div class="text-overflow">{{ product.description }}</div>
+
+
+         
+        </div>
+        <!--Content-->
+
+      </div>
+      <!--Grid column-->
+
+      <div class="col-4">
+      <p class="lead font-weight-bold mt-4">Caracteristics</p>
+        <table class="table">
+          <tr>
+            <th>brand</th><td>{{product.brand}}</td>
+          </tr>
+           <tr>
+            <th>Bracelet material</th><td>{{ product.bMaterial }}</td>
+          </tr>
+          <tr>
+              <th>Bracelet color</th><td>{{ product.bColor }}</td>
+            </tr>
+            <tr>
+                <th>Shape</th><td>{{ product.shape }}</td>
+              </tr>
+              <tr>
+                  <th>color</th><td>{{ product.color }}</td>
+                </tr>
+                <tr>
+                    <th>Movement</th><td>{{ product.move }}</td>
+                  </tr>
+        </table>
+      </div>
+
+    </div>
+    <!--Grid row-->
+
+    
+  </div>

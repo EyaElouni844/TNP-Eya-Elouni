@@ -1,0 +1,45 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand ml-5 font-weight-bold pl-3 pr-3" href="#">Bijouterie Eya</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link waves-light" routerLinkActive="active" [routerLink]="['product-list']" mdbWavesEffect>All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" routerLinkActive="active" [routerLink]="['product-list-women']" mdbWavesEffect>Women's watches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" routerLinkActive="active" [routerLink]="['product-list-men']" mdbWavesEffect>Men's watches</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link waves-light" routerLinkActive="active" [routerLink]="['product-list-mixt']" mdbWavesEffect>Mixt watches</a>
+          </li>
+      </ul>
+      <!-- Links -->  
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link">
+            <div class="btn-group" mdbDropdown> 
+              <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon><span class="caret"></span>
+              <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                <a class="dropdown-item waves-light" href="#">Action</a>
+                <a class="dropdown-item waves-light" href="#">Another action</a>
+                <a class="dropdown-item waves-light" href="#">Something else here</a>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->

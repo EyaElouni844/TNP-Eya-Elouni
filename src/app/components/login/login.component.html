@@ -1,0 +1,17 @@
+<div class="container card">
+        <form class="text-center p-5 background-dark border border-light">  
+            <p class="h4 mb-4">Login</p>
+                <!-- Login -->
+               <input type="text" #login  class="form-control mb-4" placeholder="Login">
+                <!-- Password -->
+                <input type="password" #pass class="form-control mb-4" placeholder="Password">
+                <div *ngIf="!logged" class="alert alert-danger">Wrong informations</div>
+        
+                <!-- Sign in button -->
+                <button class="btn mean-fruit-gradient my-4 white-text" (click)="connect(login.value,pass.value)" type="submit">Login</button>
+          
+                
+                
+              </form>
+            </div>
+        

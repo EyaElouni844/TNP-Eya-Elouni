@@ -1,0 +1,82 @@
+<div class="container">
+    <form class="text-center p-5 row" [formGroup]="productForm" (ngSubmit)="onSubmit()">  
+        <div class="col-8">
+            <input type="text" class="form-control mb-4" placeholder="Reference" formControlName="ref">
+        
+            <!-- Prix -->
+            <input type="number" class="form-control mb-4" placeholder="Price" formControlName="price">
+
+              <!-- Quantité -->
+              <input type="number" class="form-control mb-4" placeholder="Quantity" formControlName="quantity">
+
+              <!-- images   -->
+            <div class="custom-file mb-4">
+                  <input type="file" class="form-control" id="customFile" formControlName="image">
+            </div>
+
+            <!-- Genre -->
+            <span class="border rounded pt-2 pb-2 pl-1 pr-1">Gender :
+            <div class="custom-control custom-radio custom-control-inline mb-4 ml-2 mr-2" >
+                <input type="radio" class="custom-control-input" id="defaultGroupExample1" value="men" formControlName="gender" name="gender" checked>
+                <label class="custom-control-label" for="defaultGroupExample1">Homme</label>
+              </div>
+              
+              <div class="custom-control custom-radio custom-control-inline mb-4">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample2" value="women" formControlName="gender" name="gender">
+                <label class="custom-control-label" for="defaultGroupExample2">Femme</label>
+              </div>
+              
+              <div class="custom-control custom-radio custom-control-inline mb-4">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample3" value="mixt" formControlName="gender" name="gender">
+                <label class="custom-control-label" for="defaultGroupExample3">Mixte</label>
+              </div>
+            </span>
+
+            <!-- Descrription -->
+            <textarea type="text"  class="form-control mb-textarea" placeholder="Description" formControlName="description"></textarea>
+              <!-- Add button -->
+                    <button mdbBtn class="mean-fruit-gradient text-white" type="submit" (click)="basicModal.hide()">Update 
+                    </button>
+              </div>
+              <div class="col-4">
+                  <!-- Marque -->
+              <select class="browser-default custom-select mb-4" formControlName="brand">
+                <option value="">Select a Brand</option>
+                <option value="guess">Guess</option>
+                <option value="swatch">Swatch</option>
+                <option value="rolex">Rolex</option>
+              </select>
+              <select class="browser-default custom-select mb-4" formControlName="bMaterial">
+                <option value="">Select bracelet material</option>
+                <option value="leather">leather</option>
+                <option value="silicon">silicon</option>
+                <option value="iron">iron</option>
+              </select>
+              <select class="browser-default custom-select mb-4" formControlName="bColor">
+                <option value="">Select bracelet color</option>
+                <option value="red">red</option>
+                <option value="black">black</option>
+                <option value="blue">blue</option>
+              </select>
+              <select class="browser-default custom-select mb-4" formControlName="shape">
+                <option value="">Select shape </option>
+                <option value="1">rectanglue</option>
+                <option value="2">circle</option>
+                <option value="3">other</option>
+              </select>
+              <select class="browser-default custom-select mb-4" formControlName="color">
+                <option value="">Select inside color</option>
+                <option value="red">red</option>
+                <option value="black">black</option>
+                <option value="blue">blue</option>
+              </select>
+              <select class="browser-default custom-select mb-4" formControlName="move">
+                  <option value="">Select movement</option>
+                  <option value="quartz">quartz</option>
+                  <option value="automatic">automatic</option>
+              </select>
+              </div>
+                 
+                            
+          </form>
+        </div>
